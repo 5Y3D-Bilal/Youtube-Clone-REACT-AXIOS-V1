@@ -63,7 +63,7 @@ function Application() {
       {videos.map((item) => {
         return (
           <>
-            <div className="flex flex-col flex-wrap w-[30%] top-16 left-28 mx-2 overflow-hidden">
+            <div className="flex flex-col flex-wrap w-[30%] top-16 left-28 mx-2 overflow-hidden cursor-pointer">
               <img
                 src={item.snippet.thumbnails.high.url}
                 alt=""
