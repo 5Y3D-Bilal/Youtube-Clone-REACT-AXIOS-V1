@@ -7,20 +7,19 @@ const API_URL = `https://www.googleapis.com/youtube/v3/search`;
 function Application() {
   const [videos, setVideos] = useState([]);
   const [nextPageToken, setNextPageToken] = useState("");
-  const [loading, setLoading] = useState(true);
-  const [channelFilter, setChannelFilter] = useState(""); // State to store the channel filter
+
 
   useEffect(() => {
     fetchVideos("");
   }, []);
 
   const fetchVideos = (pageToken) => {
-    setLoading(true);
+    // setLoading(true);
     axios
       .get(API_URL, {
         params: {
           key: API_KEY,
-          q: `Your search query ${channelFilter}`, // Include channel filter in the search query
+          q: ``, 
           type: "video",
           part: "snippet",
           maxResults: 10, // Adjust as needed
@@ -31,11 +30,11 @@ function Application() {
         setVideos([...videos, ...response.data.items]);
         console.log(response);
         setNextPageToken(response.data.nextPageToken);
-        setLoading(false);
+        // setLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching data from YouTube API:", error);
-        setLoading(false);
+        // setLoading(false);
       });
   };
 
@@ -57,9 +56,7 @@ function Application() {
     };
   }, [nextPageToken]);
 
-  const handleChannelFilterChange = (event) => {
-    setChannelFilter(event.target.value);
-  };
+
 
   return (
     <div className="pl-56 pt-28 flex flex-wrap">
@@ -73,7 +70,7 @@ function Application() {
                 className="w-[100%] rounded-md h-48 object-cover"
               />
               <p className="w-96 text-xl">{item.snippet.title.slice(0,30)}... </p>
-              <div className="flex py-2">
+              <div className="flex py-2 pb-8">
                 <a href="" title="Profile">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
