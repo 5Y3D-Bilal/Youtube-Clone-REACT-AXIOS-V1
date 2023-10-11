@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_KEY = `AIzaSyDM0TBqHnxMNultqtr69bhKwMT2SXTfzQ8`;
+const API_KEY = `AIzaSyCKh9LoG05VGT2uGdQvoGsN5UYDVXOBQGw`;
 const API_URL = `https://www.googleapis.com/youtube/v3/search`;
 
 function Application() {
