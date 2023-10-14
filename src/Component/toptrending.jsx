@@ -10,32 +10,32 @@ function Toptrending() {
               </a>
             </div>
             <div className="my-2">
-              <a href="" className="bg-gray-200  rounded-[15px] px-6 py-2">
+              <a href="" className="bg-gray-200 hover:bg-gray-300 rounded-[15px] px-6 py-2">
                 Gaming
               </a>
             </div>
             <div className="my-2">
-              <a href="" className="bg-gray-200 rounded-[15px] px-6 py-2">
+              <a href="" className="bg-gray-200 hover:bg-gray-300 rounded-[15px] px-6 py-2">
                 Role-Play
               </a>
             </div>
             <div className="my-2">
-              <a href="" className="bg-gray-200  rounded-[15px] px-6 py-2">
+              <a href="" className="bg-gray-200 hover:bg-gray-300 rounded-[15px] px-6 py-2">
                 Supra mk4
               </a>
             </div>
             <div className="my-2">
-              <a href="" className="bg-gray-200  rounded-[15px] px-6 py-2">
+              <a href="" className="bg-gray-200 hover:bg-gray-300 rounded-[15px] px-6 py-2">
                 Live
               </a>
             </div>
             <div className="my-2">
-              <a href="" className="bg-gray-200  rounded-[15px] px-6 py-2">
+              <a href="" className="bg-gray-200 hover:bg-gray-300 rounded-[15px] px-6 py-2">
                 Stream
               </a>
             </div>
             <div className="my-2">
-              <a href="" className="bg-gray-200  rounded-[15px] px-6 py-2">
+              <a href="" className="bg-gray-200 hover:bg-gray-300 rounded-[15px] px-6 py-2">
                 Music
               </a>
             </div>
