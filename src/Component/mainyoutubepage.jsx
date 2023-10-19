@@ -67,23 +67,23 @@ function Application() {
         height="315"
         src="https://www.youtube.com/embed/6w8JHaARW8U?si=NG9izuHyZyDIAUFM"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        className="m-3  rounded-md"
+        className="m-3  rounded-xl"
       ></iframe>
       {videos.map((item) => {
         return (
           <>
             <div className="flex flex-col flex-wrap w-[30%] top-16 p-3 left-28 mx-2 overflow-hidden cursor-pointer">
               <div
-                className="rounded-md"
+                className=""
                 onClick={() => handleVideoClick(item.id.videoId)}
               >
                 <img
                   src={item.snippet.thumbnails.high.url}
                   alt=""
-                  className="h-56 w-96 object-cover rounded-md"
+                  className="h-56 w-[100%] rounded-lg object-cover"
                 />
               </div>
-              <p className="w-96 text-xl">
+              <p className="w-96 text-xl pt-2">
                 {item.snippet.title.slice(0, 30)}...{" "}
               </p>
               <div className="flex py-2 pb-8">
@@ -111,7 +111,7 @@ function Application() {
                 <iframe
                   width="100%"
                   height="100%"
-                  className="rounded-md"
+                  className=""
                   src={`https://www.youtube.com/embed/${currentVideo}`}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 ></iframe>

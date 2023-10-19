@@ -35,7 +35,7 @@ function Nav() {
               placeholder="Search"
               className="outline-none p-1 border-none bg-transparent w-full"
             />
-            <a href="" title="Search" className="">
+            <a href="" title="Search" className="" onClick={fetch}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
