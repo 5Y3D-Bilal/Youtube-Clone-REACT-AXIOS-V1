@@ -1,8 +1,8 @@
 function Toptrending() {
   return (
     <>
-      <div className="left-[14%] top-14 h-14 fixed bg-white w-full">
-        <div className="flex items-center">
+      <div className=" sm:left-[14%] sm:hidden md:block top-14 h-14 fixed bg-white w-full">
+        <div className="flex items-center justify-start">
           <div className="flex my-2 space-x-2 items-center">
             <div className="my-2 space-x-2">
               <a href="" className="bg-black text-white  rounded-[15px] px-6 py-2">

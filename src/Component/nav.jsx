@@ -3,8 +3,8 @@ function Nav() {
   return (
     <>
       <div className="w-full h-14 bg-white  flex items-center justify-evenly fixed py-6">
-        <div className="mx-11  flex items-center">
-          <div className="hover:bg-gray-200 rounded-full p-1">
+        <div className="sm:mx-2  md:mx-2 flex items-center">
+          <div className="hover:bg-gray-200 rounded-full p-1 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -22,7 +22,7 @@ function Nav() {
           </div>
           <img
             src="imgs/nav-ytimg.png"
-            className="w-2/6 mx-4 cursor-pointer"
+            className="w-2/6 mx-4 cursor-pointer sm:hidden md:block"
             alt=""
             title="Youtube Home"
           />
@@ -59,7 +59,7 @@ function Nav() {
           </div>
         </div>
         <div></div>
-        <div className="flex items-center mx-10 space-x-4">
+        <div className="flex items-center mx-10 space-x-4 sm:hidden md:inline-flex">
           <a href="" title="Upload">
             <svg
               xmlns="http://www.w3.org/2000/svg"

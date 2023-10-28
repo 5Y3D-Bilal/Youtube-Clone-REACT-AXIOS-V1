@@ -10,10 +10,9 @@ function Application() {
   const [currentVideo, setCurrentvideo] = useState(null);
 
   useEffect(() => {
-    fetchVideos("");
+    fetchVideos();
   }, []);
-
-  const fetchVideos = (pageToken) => {
+  function fetchVideos(pageToken) {
     // setLoading(true);
     axios
       .get(API_URL, {
@@ -36,7 +35,7 @@ function Application() {
         console.error("Error fetching data from YouTube API:", error);
         // setLoading(false);
       });
-  };
+  }
 
   const handleScroll = () => {
     if (
@@ -61,18 +60,18 @@ function Application() {
   }
 
   return (
-    <div className="pl-56 pt-28 flex flex-wrap">
+    <div className="sm:flex sm:justify-center md:pl-56 md:pt-28  flex flex-wrap">
       <iframe
         width="560"
         height="315"
         src="https://www.youtube.com/embed/6w8JHaARW8U?si=NG9izuHyZyDIAUFM"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        className="m-3  rounded-xl"
+        className="m-3 mx-10 rounded-xl"
       ></iframe>
       {videos.map((item) => {
         return (
           <>
-            <div className="flex flex-col flex-wrap w-[30%] top-16 p-3 left-28 mx-2 overflow-hidden cursor-pointer">
+            <div className="flex flex-col flex-wrap w-[340px] top-16 py-3 px-1 left-28 mx-1 overflow-hidden cursor-pointer">
               <div
                 className=""
                 onClick={() => handleVideoClick(item.id.videoId)}
@@ -80,7 +79,7 @@ function Application() {
                 <img
                   src={item.snippet.thumbnails.high.url}
                   alt=""
-                  className="h-56 w-[100%] rounded-lg object-cover"
+                  className="h-[11rem] w-[85%]  rounded-lg object-cover"
                 />
               </div>
               <p className="w-96 text-xl pt-2">
@@ -116,7 +115,7 @@ function Application() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 ></iframe>
                 <button
-                  className="absolute top-4 right-4 text-white bg-red-500 px-1 py-1 rounded cursor-pointer"
+                  className="absolute top-4 right-4 text-white bg-gray-500 px-1 py-1 rounded cursor-pointer"
                   onClick={() => setCurrentvideo(null)}
                 >
                   <svg

@@ -2,7 +2,7 @@ import "./../App.css";
 function Sidebar() {
   return (
     <>
-      <div className="fixed top-14 w-33 sideBar ">
+      <div className="fixed top-14 w-33 sideBar sm:hidden md:block">
         <div className=" h-auto ">
           <div className="cursor-pointer w-full flex  items-center ml-[12px]  h-14 ">
             <a
